@@ -10,12 +10,19 @@
         <h1>Current Weather</h1>
     </header>
     <main>
-        <section id="weather"></section>
-        <form>
-            <input name="search" id="weather-search" type="text" placeholder="Enter Location">
-            </input>
-            <button type="submit">Search</button>
-        </form>
+        <section id="weather">
+            <form>
+                <input name="search" id="weather-search" type="text" placeholder="Enter Location">
+                </input>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <div class="display">
+            <h2 class= "name"></h2>
+            <p class="descriptor"></p>
+            <p class="temp"></p>
+        </div>
     </main>
     <script src = "index.js"></script>
   </body>

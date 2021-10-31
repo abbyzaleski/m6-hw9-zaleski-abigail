@@ -1,5 +1,9 @@
 var btn = document.querySelector('button')
 var forecastE1 = document.getElementById('forecast')
+var inputValue = document.querySelector('.inputValue')
+var name = document.querySelector('.name');
+var descriptor = document.querySelector('.descriptor');
+var temp = document.querySelector('.temp');
 
 btn.onclick = function() {
     console.log('clicked')

@@ -34,7 +34,21 @@ function renderWeather(weatherObj) {
     weatherEl.appendChild(description)
     weatherEl.appendChild(weather)
 
-    // 
+    // Icon Image for Current Weather
+    var icon = document.createElement('img')
+    icon.src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
+    weatherEl.appendChild(icon)
+
+    // Current Temperature
+    var temp = document.createElement('h4')
+    temp.textContent = "Temperature: " + weatherObj.main.temp
+    weatherEl.appendChild(temp)
+
+    // Feels Like Temperature
+    var feelsLike = document.createElement('h4')
+    feelsLike.textContent = "Feels Like: " + weatherObj.main.feels_like 
+    weatherEl.appendChild(feelsLike)
+
 }
 
 

@@ -36,7 +36,7 @@ function renderWeather(weatherObj) {
 
     // Icon Image for Current Weather
     var icon = document.createElement('img')
-    icon.src = weatherObj.weather[0].icon + "https://openweathermap.org/img/w/${this.props.icon}.png"
+    icon.src = weatherObj.weather[0].icon + "http://openweathermap.org/img/wn/$weatherData.weather[0].icon@2x.png"
     weatherEl.appendChild(icon)
 
     // Current Temperature

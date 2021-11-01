@@ -1,17 +1,27 @@
 var btn = document.querySelector('button')
-var forecastE1 = document.getElementById('forecast')
-var inputValue = document.querySelector('.weather-search')
-var name = document.querySelector('.name');
-var descriptor = document.querySelector('.descriptor');
-var temp = document.querySelector('.temp');
+var formEl = document.querySelector('form')
+var inputEl = document.querySelector('input')
+var weatherEl = document.getElementById('weather')
 
-btn.onclick = function() {
+formEl.onsubmit = function(e) {
     // console.log('clicked')
-    fetch("https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&APPID=82133d0b69b88c6cf71f71c9df46bd5f")
+    e.preventDefault()
+    var query = inputEl.value
+    fetch('https://api.openweathermap.org/data/2.5/weather?appid=6232ea44ad23977eea2bad98d28a42f8&units=imperial&q=' + query)
     .then(function(res) {
         return res.json()
     })
     .then(function(res) {
+        renderWeather(res)
         console.log(res)
     })
+}
+
+function renderWeather(weatherObj) {
+    weatherEl.innerHTML = ""
+    var name = document.createElement('h2')
+    var country = document.createElement('h2')
+    name.textContent = weatherObj.name + "" + ", " + weatherObj.sys.country + ""
+    weatherEl.appendChild(name)
+    weatherEl.appendChild(country)
 }

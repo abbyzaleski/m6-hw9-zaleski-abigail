@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(pink, lightblue);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: midnightblue;
+}
+
+h1{
+    padding: 5vh;
+}

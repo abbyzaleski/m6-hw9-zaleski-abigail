@@ -30,13 +30,13 @@ function renderWeather(weatherObj) {
     // Description of Current Weather
     var description = document.createElement('h3')
     var weather = document.createElement('h3')
-    description.textContent = weatherObj.weather.description + ""
+    description.textContent = weatherObj.weather[0].description + ""
     weatherEl.appendChild(description)
     weatherEl.appendChild(weather)
 
     // Icon Image for Current Weather
     var icon = document.createElement('img')
-    icon.src = weatherObj.weather.icon + "https://openweathermap.org/img/wn/" + icon + "@2x.png"
+    icon.src = weatherObj.weather[0].icon + "https://openweathermap.org/img/w/${this.props.icon}.png"
     weatherEl.appendChild(icon)
 
     // Current Temperature

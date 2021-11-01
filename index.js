@@ -18,10 +18,23 @@ formEl.onsubmit = function(e) {
 }
 
 function renderWeather(weatherObj) {
+
+    // Name of Searched City and Country
     weatherEl.innerHTML = ""
     var name = document.createElement('h2')
     var country = document.createElement('h2')
     name.textContent = weatherObj.name + "" + ", " + weatherObj.sys.country + ""
     weatherEl.appendChild(name)
     weatherEl.appendChild(country)
+
+    // Description of Current Weather
+    var description = document.createElement('h3')
+    var weather = document.createElement('h3')
+    description.textContent = weatherObj.weather.description + ""
+    weatherEl.appendChild(description)
+    weatherEl.appendChild(weather)
+
+    // 
 }
+
+
